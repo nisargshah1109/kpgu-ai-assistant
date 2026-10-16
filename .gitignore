@@ -1,0 +1,178 @@
+# ============================================================
+# KPGU AI Assistant — Root .gitignore
+# ============================================================
+
+# -------------------------------------------------------
+# CRITICAL: Secret / Credential Files
+# -------------------------------------------------------
+.env
+.env.local
+.env.*.local
+*.env
+backend/.env
+backend/.env.local
+
+# -------------------------------------------------------
+# Python
+# -------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+htmlcov/
+.hypothesis/
+.pytest_cache/
+*.pyc
+
+# -------------------------------------------------------
+# Python Virtual Environments
+# -------------------------------------------------------
+venv/
+.venv/
+env/
+ENV/
+backend/venv/
+backend/.venv/
+
+# -------------------------------------------------------
+# Python logs and scratch files
+# -------------------------------------------------------
+backend/backend.log
+backend/server.log
+backend/response.txt
+backend/extracted_text.txt
+backend/body_inner.html
+backend/debug_page.html
+backend.log
+kb_build.log
+
+# -------------------------------------------------------
+# Development-only crawler/debug test scripts (backend root)
+# These are scratch/dev tools not part of the application
+# -------------------------------------------------------
+backend/analyze_html.py
+backend/check_debug.py
+backend/check_debug2.py
+backend/check_debug3.py
+backend/chrome_direct_test.py
+backend/debug_crawler.py
+backend/debug_requests.py
+backend/minimal_test.py
+backend/simple_selenium_test.py
+backend/test_crawler.py
+backend/test_crawler2.py
+backend/test_crawler_detailed.py
+backend/test_crawler_direct.py
+backend/test_crawler_improved.py
+backend/test_crawler_improved_fixed.py
+backend/test_crawler_simple.py
+backend/test_import.py
+backend/test_jsonld.py
+backend/test_jsonld_extraction.py
+backend/test_pages.py
+backend/test_robots.py
+backend/test_scripts.py
+backend/test_selenium_crawler.py
+backend/test_selenium_example.py
+backend/test_selenium_kpgu.py
+backend/test_selenium_simple.py
+backend/test_simple_request.py
+backend/test_sitemap.py
+backend/test_text_extract.py
+backend/test_with_wdm_local.py
+
+# -------------------------------------------------------
+# SQLite Databases (contain conversation data)
+# -------------------------------------------------------
+*.db
+*.sqlite
+*.sqlite3
+backend/kpgu_assistant.db
+kpgu_assistant.db
+
+# -------------------------------------------------------
+# FAISS Index & Vector Store (large binary — regenerated via pipeline)
+# -------------------------------------------------------
+vector_store/faiss_index.bin
+backend/vector_store/faiss_index.bin
+
+# -------------------------------------------------------
+# Large generated knowledge-base files
+# These can be rebuilt; include only processed chunks for dev reference
+# -------------------------------------------------------
+# Uncomment these if you don't want to publish the processed data:
+# data/raw/
+# data/processed/
+
+# -------------------------------------------------------
+# Selenium / Web Driver binaries
+# -------------------------------------------------------
+backend/.wdm/
+.wdm/
+
+# -------------------------------------------------------
+# Node.js / Frontend
+# -------------------------------------------------------
+node_modules/
+frontend/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+frontend/frontend.log
+*.local
+
+# Frontend build output
+dist/
+dist-ssr/
+frontend/dist/
+frontend/dist-ssr/
+
+# -------------------------------------------------------
+# Logs
+# -------------------------------------------------------
+logs/
+*.log
+
+# -------------------------------------------------------
+# IDEs and Editors
+# -------------------------------------------------------
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# -------------------------------------------------------
+# Backups
+# -------------------------------------------------------
+backups/
+
+# -------------------------------------------------------
+# Debug HTML artifacts at project root
+# -------------------------------------------------------
+debug_page.html
